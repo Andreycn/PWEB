@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --corprincipal: #F7F8FA;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--corprincipal);
+}
+
+.header-1{
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.nav{
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.nav-logo{
+    color: var(--corprincipal);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    padding: 5px 0;
+}
+
+.nav-menu{
+    float: right;
+}
+
+.nav-list{
+    list-style: none;
+}
+
+.nav-item{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-link{
+    color: var(--corprincipal);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-item.active,
+.nav-link:hover{
+    color: #8257E5;
+    background-color: #555;
+    border-radius: 3px;
+}
+
+section{
+    padding: 80px 0;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #8257E5;
+}
+
+.home{
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.home-data{
+    float: left;
+    width: 500px;
+}
+
+.home-title{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.home-title-color{
+    color: #8257E5;
+}
+
+.home-img{
+    float: right;
+    width: 400px;
+    text-align: center;
+}
+
+.home-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.button{
+    display: inline-block;
+    background-color: #8257E5;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button:hover{
+    background-color: #0056b3;
+}
+
+.about{
+    text-align: center;
+}
+
+.about-container{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.about-subtitle{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.about-text{
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.formation{
+    text-align: center;
+}
+
+.formation{
+    text-align: center;
+}
+
+.formation-container{
+    width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
