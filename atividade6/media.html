@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculando medias</title>
+
+    <script>
+        /* VARIAVEIS GLOBAIS */
+
+        var nome;
+        var nota1;
+        var nota2;
+        var nota3;
+        var nota4;
+        var resultado;
+
+
+        nome = prompt("Qual é o seu nome?");
+        nota1 = prompt("Qual é o seu nota 1?");
+        nota2 = prompt("Qual é o seu nota 2?");
+        nota3 = prompt("Qual é o seu nota 3?");
+        nota4 = prompt("Qual é o seu nota 4?");
+
+        nota1 = parseFloat(nota1);
+        nota2 = parseFloat(nota2);
+        nota3 = parseFloat(nota3);
+        nota4 = parseFloat(nota4);
+
+        resultado = ((nota1+nota2+nota3+nota4)/4);
+
+        alert("Aluno: "+ nome);
+        alert("A sua média é: "+ resultado);
+    
+    
+    </script>
+</head>
+
+
+<body>
+</body>
+
+</html>
