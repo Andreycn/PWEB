@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var aluno1 = new Object();
+
+        aluno1.ra = "0030482323005"
+        aluno1.nome = "Arthur"
+
+        alert(`ra=${aluno1.ra} nome=${aluno1.nome}`)
+
+        var aluno2 = {};
+
+        aluno2.ra = "1234"
+
+        aluno2["nome"] = "Paulo"
+
+        alert("ra=" + aluno2.ra + " nome= " + aluno2.nome);
+
+        aluno2["email do aluno"] = "paulo@gmail.com"
+
+        alert(aluno2["email do aluno"]);
+        
+
+        function Aluno5() {
+            var ra;
+            var nome;
+            this.setRa = function(value) {
+                this.ra = value;
+            }
+            this.getRa = function() {
+                return this.ra;
+            }
+            this.setNome = function(value) {
+                this.nome = value;
+            }
+            this.getNome = function() {
+                return this.nome;
+            }
+        }
+
+        let aluno5 = new Aluno5
+
+        aluno5.setNome("Arthur")
+        aluno5.setRa(123)
+
+        alert(aluno5.getNome())
+        alert(aluno5.getRa())
+
+
+        function AlunoADS() {
+            var numLab;
+            this.setnumLab = function(value) {
+                this.numLab = value;
+            }
+            this.getnumLab = function(value) {
+                return this.numLab 
+            }
+        }
+
+        AlunoADS.prototype = new Aluno5();
+
+        var aluno7 = new AlunoADS()
+        aluno7.setnumLab(5)
+        aluno7.setNome("Arthur")
+
+        class Aluno1 {
+            constructor() {
+                this._ra;
+                this._nome;
+            }
+            setnome(value) {
+                this._nome = value;
+            }
+            getNome() {
+                return this._nome
+            }
+            setRA(value) {
+                this._ra = value;
+            }
+            getRA() {
+                return this._ra
+            }
+        }
+
+        var objAluno = new Aluno1();
+
+        objAluno.setnome("Nome")
+        objAluno.setRA(12345678)
+
+        alert("nome objAluno " + objAluno.getNome() + " RA: " + objAluno.getRA())
+
+        class AlunoADS1 extends Aluno1 {
+            constructor() {
+
+                super()
+                this._numLab;
+            }
+            setnumLab(value) {
+                this._numLab = value;
+            }
+            getnumLab() {
+                return this._numLab
+            }
+        }
+         
+        var objAlunoADS = new AlunoADS1();
+        objAlunoADS.setnome("Nome")
+        objAlunoADS.setRA(123)
+        objAlunoADS.setnumLab(6);
+
+        alert(objAlunoADS.getNome() + objAlunoADS.getRA() + objAlunoADS.getnumLab())
+    </script>    
+</body>
