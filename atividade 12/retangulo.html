@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <script src="retangulo.js"></script>
+    <title>Retangulo</title>
+</head>
+<body>
+    <script>
+        function Retangulo(x, y) {
+        this.base = x;
+        this.altura = y;
+
+        this.calcularArea = function() {
+            return this.base * this.altura;
+        };
+        }
+
+        // Criando um objeto e exibindo a área
+        let ret = new Retangulo(5, 10);
+        console.log("Área do retângulo:", ret.calcularArea());
+    </script>
+</body>
+</html>
