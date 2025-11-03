@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Controle de Janela</title>
+<style>
+    img {
+      width: 300px;
+      cursor: pointer;
+    }
+    h1 {
+      font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+ 
+  <h1 id="titulo">Janela Fechada</h1>
+<img id="imagemJanela" src="janela-fechada.jpg" alt="Janela">
+ 
+  <script>
+    const img = document.getElementById('imagemJanela');
+    const titulo = document.getElementById('titulo');
+ 
+    // URLs das imagens — você deve substituir pelos caminhos reais das suas imagens.
+    const janelaFechada = 'janela-fechada.jpg';
+    const janelaAberta   = 'janela-aberta.jpg';
+    const janelaQuebrada  = 'janela-quebrada.jpg';
+ 
+    // Estado atual
+    let estado = 'fechada';
+ 
+    // Ao carregar a página, já está “fechada”
+    img.src = janelaFechada;
+    titulo.textContent = 'Janela Fechada';
+ 
+    // Quando o mouse entra sobre a imagem → abre a janela
+    img.addEventListener('mouseover', function() {
+      if (estado === 'fechada') {
+        img.src = janelaAberta;
+        titulo.textContent = 'Janela Aberta';
+      }
+    });
+ 
+    // Quando o mouse sai da imagem → fecha a janela
+    img.addEventListener('mouseout', function() {
+      if (estado === 'fechada') {
+        img.src = janelaFechada;
+        titulo.textContent = 'Janela Fechada';
+      }
+    });
+ 
+    // Quando clicar na imagem → janela quebrada
+    img.addEventListener('click', function() {
+      estado = 'quebrada';
+      img.src = janelaQuebrada;
+      titulo.textContent = 'Janela Quebrada';
+ 
+      // Opcional: remover os outros eventos para que não volte ou mude mais
+      img.removeEventListener('mouseover', this);
+      img.removeEventListener('mouseout', this);
+    });
+</script>
+ 
+</body>
+</html>
